@@ -9,3 +9,8 @@ Angular Tree Node
 2.
 
 ![alt text](https://github.com/charbelmhanna/TreeNode/blob/main/Screenshot%202021-09-15%20134925.png?raw=true)
+
+
+3.
+
+![alt text](https://github.com/charbelmhanna/TreeNode/blob/main/Screenshot%202021-09-15%20140934.png?raw=true)
