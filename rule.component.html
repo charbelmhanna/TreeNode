@@ -1,0 +1,90 @@
+<div class="main__container" fxLayout="column">
+          <div class="container__rules">
+            <mat-card>
+              <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+                <mat-nested-tree-node *matTreeNodeDef="let node">
+                  <li *ngIf="node.condition">
+                    <div class="mat-tree-node-condition">
+                      <mat-button-toggle-group #group="matButtonToggleGroup">
+                        <mat-button-toggle value="left" aria-label="Text align left">
+                          <span class="condition-text">AND</span>
+                        </mat-button-toggle>
+                        <mat-button-toggle value="center" aria-label="Text align center">
+                          <span class="condition-text">OR</span>
+                        </mat-button-toggle>
+                        <mat-button-toggle value="right" aria-label="Text align right">
+                          <span class="condition-text">NOT</span>
+                        </mat-button-toggle>
+                      </mat-button-toggle-group>
+                    </div>
+                  </li>
+                  <li class="no-border">
+                    <div class="mat-tree-node">
+                      <mat-form-field appearance="outline" fxFlex="30%">
+                        <mat-label>{{ 'CRITERIA' | translate }} *</mat-label>
+                        <input
+                          type="text"
+                          matInput
+                          [matAutocomplete]="auto"
+                        />
+                        <mat-autocomplete #auto="matAutocomplete">
+                          <mat-option
+
+                          >
+                            {{node.item.criteria}}
+                          </mat-option>
+                        </mat-autocomplete>
+                        <mat-icon class="drop-color" matSuffix>arrow_drop_down</mat-icon>
+                      </mat-form-field>
+                      <mat-form-field appearance="outline" fxFlex="30%">
+                        <mat-label>{{ 'OPERATOR' | translate }} *</mat-label>
+                        <input
+                          type="text"
+                          matInput
+                          [matAutocomplete]="auto"
+                        />
+                        <mat-autocomplete #auto="matAutocomplete">
+                          <mat-option
+
+                          >
+
+                          </mat-option>
+                        </mat-autocomplete>
+                        <mat-icon class="drop-color" matSuffix>arrow_drop_down</mat-icon>
+                      </mat-form-field>
+                      <mat-form-field appearance="outline" fxFlex="30%">
+                        <mat-label>{{ 'VALUE' | translate }} *</mat-label>
+                        <input
+
+                          type="text"
+                          matInput
+                          [matAutocomplete]="auto"
+                        />
+                        <mat-autocomplete #auto="matAutocomplete">
+                          <mat-option
+
+                          >
+
+                          </mat-option>
+                        </mat-autocomplete>
+                        <mat-icon class="drop-color" matSuffix>arrow_drop_down</mat-icon>
+                      </mat-form-field>
+
+                    </div>
+                  </li>
+                  <li *ngIf="checkifLast(node.index)">
+                    <div class="mat-tree-node-last">
+                      <button mat-icon-button matTreeNodeToggle
+                              [matTreeNodeToggleRecursive]="recursive"
+                              [attr.aria-label]="'toggle' + node.filename" (click)="addSubRule()">
+                      <span class="tree__node-message">
+                        {{'ADD_NEW_RULE' | translate}}
+                      </span>
+                      </button>
+                    </div>
+                  </li>
+                </mat-nested-tree-node>
+              </mat-tree>
+            </mat-card>
+          </div>
+        </div>
