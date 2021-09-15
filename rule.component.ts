@@ -10,7 +10,6 @@ import { TreeNode } from '@app/admin-calendars/new-rule/tree-node/tree-node';
   styleUrls: ['./rule.component.scss'],
 })
 export class RuleComponent implements OnInit {
-  tabNumber: number = this.getActiveIndex();
   recursive: boolean = false;
   dataSource: MatTreeNestedDataSource<TreeNode>;
   levels = new Map<TreeNode, number>();
