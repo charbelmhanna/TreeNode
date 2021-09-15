@@ -1,0 +1,175 @@
+.main__container{
+  min-height: 250px;
+  position: relative;
+}
+
+.container__rules{
+ position: relative;
+
+}
+
+.container__sub-rules{
+  justify-content: space-evenly;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+::ng-deep .mat-button-toggle-checked{
+  background-color: rgb(214,218,238);
+  .condition-text{
+    color: blue !important;
+    font-family: "Poppins" !important;
+    font-weight: 600 !important;
+  }
+}
+
+
+
+.tree-node{
+  min-height: 66px;
+  height: inherit;
+  width: 15px;
+  border-left: 2px solid lightgray;
+  border-bottom: 2px solid lightgray;
+  border-top: 2px solid lightgray;
+  position: absolute;
+  left: 16px;
+  top: 49px;
+}
+.tree__node-message{
+  color: blue;
+  font-family: "Poppins";
+  font-weight: 550;
+  cursor: pointer;
+}
+
+
+
+.tree_node-button{
+  margin-bottom: 1.5rem;
+}
+.tree_node-button-special{
+  padding-top: 2rem;
+}
+
+.tree__node-special{
+  height: 45px;
+  width: 15px;
+  border-left: 2px solid lightgray;
+  border-bottom: 2px solid lightgray;
+  position: absolute;
+  left: 17px;
+  top: 151px;
+}
+
+/*TREE*/
+.example-tree-progress-bar {
+  margin-left: 30px;
+}
+
+::ng-deep .mat-tree{
+  background-color: unset;
+}
+
+.example-tree-nested-node {
+  padding-left: 30px;
+}
+
+::ng-deep.mat-card:not([class*=mat-elevation-z]){
+  box-shadow: unset !important;
+  border-radius: 0.875rem;
+  background-color: rgb(250,250,250);
+  border:1px solid rgb(210, 210, 210);
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+}
+
+.mat-tree-node {
+  background-color: rgb(250,250,250);
+  justify-content: space-evenly;
+}
+.mat-tree-node-condition{
+  background-color: rgb(250,250,250);
+  align-content: flex-start;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+.mat-tree-node-last{
+  background-color: rgb(250,250,250);
+  padding: 1rem;
+  line-height: 3.2rem;
+}
+
+.mat-card{
+  background-color: rgb(250,250,250);
+}
+
+.mat-nested-tree-node {
+  top: -24px;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li.example-tree-container {
+  border-bottom: 0;
+  background-color: rgb(250,250,250);
+}
+
+ul {
+  padding-left: 40px;
+}
+
+li {
+  padding-left: 40px;
+  border: 2px solid lightgray;
+  border-width: 0 0 1px 1px;
+  position: relative;
+  border-bottom-width: medium;
+  border-left-width: medium;
+  top: -24px;
+}
+
+
+.no-border:first-child{
+  border-width: 0 0 1px 0px;
+  border-bottom-width: medium;
+}
+
+li.mat-tree-node,
+li div {
+  margin: 0;
+  position: relative;
+  top: 60px;
+}
+
+li.mat-tree-node-last,
+li div {
+  margin: 0;
+  position: relative;
+  top: 45px;
+}
+
+
+li ul {
+  border-top: 1px solid lightgray;
+  border-top-width: medium;
+  margin-left: -40px;
+  padding-left: 60px;
+}
+
+.mat-nested-tree-node:last-child ul {
+  border-left: 1px solid white;
+  margin-left: -41px;
+}
+
+.mat-icon-button {
+  z-index: 100;
+}
+
+
